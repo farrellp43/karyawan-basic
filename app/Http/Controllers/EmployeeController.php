@@ -111,4 +111,11 @@ class EmployeeController extends Controller
 
         return redirect('employees')->with("success", "Data karyawan telah dihapus.");
     }
+
+    public function landing()
+    {
+        $employees = Employee::all();
+
+        return view('landing', compact('employees'));
+    }
 }

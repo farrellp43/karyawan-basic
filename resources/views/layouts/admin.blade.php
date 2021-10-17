@@ -12,7 +12,7 @@
 
     {{-- Style --}}
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/all.min.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url('css/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
@@ -36,7 +36,6 @@
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="{{ url('img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -117,25 +116,6 @@
               'autoWidth'   : true
             });
           });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#Criteria').DataTable({
-              'paging'      : false,
-              'lengthChange': true,
-              'searching'   : true,
-              'ordering'    : true,
-              'info'        : true,
-              'autoWidth'   : true
-            });
-          });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#paginationSimpleNumbers').DataTable({
-                "pagingType": "simple_numbers"
-            });
-        });
     </script>
 
 </body>

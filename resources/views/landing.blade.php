@@ -31,6 +31,9 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="{{ url('css/landing.css') }}">
 
+    <!--====== DataTables CSS ======-->
+    <link rel="stylesheet" href="{{ url('css/datatables.min.css') }}">
+
 </head>
 
 <body>
@@ -111,7 +114,8 @@
                                     <h1 class="title">Aplikasi Karyawan</h1>
                                     <p class="text">Dapat melakukan CRUD, SMTP, dan Export ke .xls</p>
                                     <ul class="slider-btn rounded-buttons">
-                                        <li><a class="main-btn rounded-one page-scroll" href="#services">LIHAT TABEL</a></li>
+                                        <li><a class="main-btn rounded-one page-scroll" href="#services">LIHAT TABEL</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -144,22 +148,34 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Graphics Design</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-brush"></i>
-                                <img class="shape" src="images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description
-                                for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
+                        <div class="table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="MyTables">
+                                <thead>
+                                    <tr align="center">
+                                        <th>ID</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Umur</th>
+                                        <th>Gaji</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($employees as $employee)
+                                    <tr>
+                                        <td>{{ $employee->id }}</td>
+                                        <td>{{ $employee->name }}</td>
+                                        <td>{{ $employee->email }}</td>
+                                        <td>{{ $employee->age }}</td>
+                                        <td>{{ $employee->salary }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div> <!-- single features -->
                 </div>
-                </div>
-            </div> <!-- row -->
+            </div>
+        </div> <!-- row -->
         </div> <!-- container -->
     </section>
 
@@ -247,6 +263,23 @@
 
     <!--====== Main js ======-->
     <script src="{{ url('js/main.js') }}"></script>
+
+    <!--====== DataTables js ======-->
+    <script src="{{ url('js/datatables.min.js') }}"></script>
+
+    <!--====== DataTables script ======-->
+    <script>
+        $(document).ready(function() {
+            $('#MyTables, #Tables').DataTable({
+              'paging'      : true,
+              'lengthChange': true,
+              'searching'   : false,
+              'ordering'    : true,
+              'info'        : false,
+              'autoWidth'   : true
+            });
+          });
+    </script>
 
 </body>
 

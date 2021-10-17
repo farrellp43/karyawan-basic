@@ -64,7 +64,7 @@
                     <div class="form-group row mb-0">
                         <div class="col-md-8 offset-md-4">
                             <a href="{{route('employees.index')}}" class="btn btn-outline-dark">
-                                Cancle
+                                Cancel
                             </a>
                             <button type="submit" class="btn btn-primary">
                                 Submit
