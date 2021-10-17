@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!--====== Title ======-->
-    <title>Karyawan &middot; Basic</title>
+    <title>Karyawan</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,12 +108,10 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="slider-content">
-                                    <h1 class="title">Business is Now Digital</h1>
-                                    <p class="text">We blend insights and strategy to create digital products for
-                                        forward-thinking organisations.</p>
+                                    <h1 class="title">Aplikasi Karyawan</h1>
+                                    <p class="text">Dapat melakukan CRUD, SMTP, dan Export ke .xls</p>
                                     <ul class="slider-btn rounded-buttons">
-                                        <li><a class="main-btn rounded-one" href="#">GET STARTED</a></li>
-                                        <li><a class="main-btn rounded-two" href="#">DOWNLOAD</a></li>
+                                        <li><a class="main-btn rounded-one page-scroll" href="#services">LIHAT TABEL</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -139,20 +137,18 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-10">
                     <div class="section-title text-center pb-10">
-                        <h3 class="title">Our Services</h3>
-                        <p class="text">Stop wasting time and money designing and managing a website that doesn’t get
-                            results. Happiness guaranteed!</p>
+                        <h3 class="title">Tabel Karyawan</h3>
                     </div> <!-- row -->
                 </div>
             </div> <!-- row -->
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="single-features mt-40">
                         <div class="features-title-icon d-flex justify-content-between">
                             <h4 class="features-title"><a href="#">Graphics Design</a></h4>
                             <div class="features-icon">
                                 <i class="lni lni-brush"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
+                                <img class="shape" src="images/f-shape-1.svg" alt="Shape">
                             </div>
                         </div>
                         <div class="features-content">
@@ -162,37 +158,6 @@
                         </div>
                     </div> <!-- single features -->
                 </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Website Design</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-layout"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description
-                                for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Digital Marketing</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-bolt"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description
-                                for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
-                        </div>
-                    </div> <!-- single features -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
