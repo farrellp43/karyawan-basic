@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Mail\UserRegisterMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -64,10 +66,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $details = [
+            'name' => $data['name'],
+            'title' => 'Selamat datang!'
+        ];
+
+        $email_data = array(
+            'name' => $data['name'],
+            'email' => $data['email'],
+        );
+
+        // send email with the template
+        // Mail::send('emails.user-register', $email_data, function ($message) use ($email_data) {
+        //     $message->to($email_data['email'], $email_data['name'])
+        //         ->subject('Selamat datang di Aplikasi Karyawan!');
+        //         // ->from('info@mynotepaper.com', 'MyNotePaper');
+        // });
+
+        Mail::to($email_data['email'], $email_data['name'])->send(new UserRegisterMail($details));
+
+        return $user;
     }
 }
